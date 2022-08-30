@@ -24,10 +24,10 @@ describe('<GameCard />', () => {
       screen.getByRole('heading', { name: props.developer })
     ).toBeInTheDocument()
 
-    // expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
-    //   'src',
-    //   props.img
-    // )
+    expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
+      'src',
+      props.img
+    )
 
     expect(screen.getByLabelText(/Add to Wishlist/i)).toBeInTheDocument()
   })

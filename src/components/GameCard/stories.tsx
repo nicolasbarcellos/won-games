@@ -1,5 +1,6 @@
 import { Story, Meta } from '@storybook/react'
 import GameCard, { GameCardProps } from '.'
+import 'next-image.mock'
 
 export default {
   title: 'GameCard',
