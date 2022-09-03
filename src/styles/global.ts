@@ -40,6 +40,7 @@ const GlobalStyles = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   }
 
+
   ${({ theme }) => css`
     html {
       font-size: 62.5%;
@@ -48,6 +49,15 @@ const GlobalStyles = createGlobalStyle`
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.9;
     }
   `}
 
