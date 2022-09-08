@@ -12,7 +12,7 @@ export default {
     backgroundImage: '/img/red-dead-bg.png'
   },
   parameters: {
-    layout: 'fullscrenn'
+    layout: 'fullscreen'
   }
 } as Meta
 
