@@ -11,20 +11,20 @@ describe('<Heading />', () => {
     expect(heading).toBeInTheDocument()
   })
 
-  it('should render a black heading by default', () => {
+  it('should render a white heading by default', () => {
     renderWithTheme(<Heading>Heading</Heading>)
 
     const heading = screen.getByRole('heading', { name: /Heading/i })
 
-    expect(heading).toHaveStyle({ color: '#030517' })
+    expect(heading).toHaveStyle({ color: '#FAFAFA' })
   })
 
-  it('should render a white heading when color is passed', () => {
-    renderWithTheme(<Heading color="white">Heading</Heading>)
+  it('should render a black heading when color is passed', () => {
+    renderWithTheme(<Heading color="black">Heading</Heading>)
 
     const heading = screen.getByRole('heading', { name: /Heading/i })
 
-    expect(heading).toHaveStyle({ color: '#FAFAFA' })
+    expect(heading).toHaveStyle({ color: '#030517' })
   })
 
   it('should render a heading with a line to the left side', () => {
