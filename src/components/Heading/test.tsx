@@ -61,6 +61,14 @@ describe('<Heading />', () => {
     expect(heading).toHaveStyle({ 'font-size': '1.6rem' })
   })
 
+  it('should render a heading with a huge size', () => {
+    renderWithTheme(<Heading size="huge">Heading</Heading>)
+
+    const heading = screen.getByRole('heading', { name: /Heading/i })
+
+    expect(heading).toHaveStyle({ 'font-size': '5.2rem' })
+  })
+
   it('should render a heading with a small line at the bottom', () => {
     renderWithTheme(
       <Heading color="white" size="small" lineBottom={true}>

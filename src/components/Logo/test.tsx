@@ -5,6 +5,11 @@ import 'jest-styled-components'
 import Logo from '.'
 
 describe('<Logo />', () => {
+  it('should render the logo with id passed', () => {
+    const { container } = renderWithTheme(<Logo id="logo" />)
+    expect(container.querySelector('#paint_linear_logo')).toBeInTheDocument()
+  })
+
   it('should render a white label by default', () => {
     // renderizar o componente
     renderWithTheme(<Logo />)
