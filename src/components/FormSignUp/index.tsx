@@ -1,13 +1,18 @@
-import { Email, Lock } from '@styled-icons/material-outlined'
+import { AccountCircle, Email, Lock } from '@styled-icons/material-outlined'
 import Button from 'components/Button'
 import TextField from 'components/TextField'
 import Link from 'next/link'
-import { FormLink, FormWrapper } from 'components/Form'
-import * as S from './styles'
+import { FormWrapper, FormLink } from 'components/Form'
 
-const FormSignIn = () => (
+const FormSignUp = () => (
   <FormWrapper>
     <form>
+      <TextField
+        name="name"
+        placeholder="Name"
+        type="text"
+        icon={<AccountCircle />}
+      />
       <TextField
         name="email"
         placeholder="Email"
@@ -20,21 +25,25 @@ const FormSignIn = () => (
         type="password"
         icon={<Lock />}
       />
-
-      <S.ForgotPassword href="#">Forgot your password?</S.ForgotPassword>
+      <TextField
+        name="confimPassword"
+        placeholder="Confirm Password"
+        type="password"
+        icon={<Lock />}
+      />
 
       <Button size="large" fullWidth>
-        Sign in now
+        Sign up now
       </Button>
 
       <FormLink>
-        Do not have an account?{' '}
+        Already have an account?{' '}
         <Link href="/sign-up">
-          <a>Sign up</a>
+          <a>Sign in</a>
         </Link>
       </FormLink>
     </form>
   </FormWrapper>
 )
 
-export default FormSignIn
+export default FormSignUp

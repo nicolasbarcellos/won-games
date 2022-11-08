@@ -48,8 +48,8 @@ describe('<Menu />', () => {
     expect(screen.queryByText(/Minha conta/i)).not.toBeInTheDocument()
     expect(screen.queryByText(/Lista de desejos/i)).not.toBeInTheDocument()
 
-    expect(screen.getByText(/entrar/i)).toBeInTheDocument()
-    expect(screen.getByText(/crie sua conta/i)).toBeInTheDocument()
+    expect(screen.getByText(/Início/i)).toBeInTheDocument()
+    expect(screen.getByText(/Explorar/i)).toBeInTheDocument()
   })
 
   it('should show wishlist and account when logged in', () => {
